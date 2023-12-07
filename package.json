@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix build --sourcemap",
+    "build": "remix build --sourcemap && sentry-upload-sourcemaps --org <org> --project <project> --server",
     "dev": "remix dev --manual",
     "postinstall": "patch-package",
     "start": "remix-serve ./build/index.js",
